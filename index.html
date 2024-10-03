@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div class="container1">
+            <div class="conteneur">
+                <h3 id="home">HOME</h3>
+                <div class="score">
+                    <p class="scoreDigits off" id="homescore"></p>
+                </div>
+                <div class="threebtn">
+                    <div class="onebutton"><button class="hgBtn" onclick='addPoints(1, "Home")' disabled>+1</button></div>
+                    <div class="onebutton"><button class="hgBtn" onclick='addPoints(2, "Home")' disabled>+2</button></div>
+                    <div class="onebutton"><button class="hgBtn" onclick='addPoints(3, "Home")' disabled>+3</button></div> 
+                </div>
+            </div>
+            <div class="parent-timer">
+                <div class="contTimer">
+                    <h4 id="periodTitle">PERIOD</h4>
+                    <div class="period" id="period">0</div>
+                    <h4 id="timerTitle">TIMER</h4>
+                    <div class="timer" id="timer"></div>
+                    <button id="btnTimer" onclick="manageTimer()" disabled>START</button>
+                </div>
+
+                <div class="contTimer unfolded" id="emoji">
+                </div>
+            </div>
+
+            <div class="conteneur">
+                <h3 id="guest">GUEST</h3>
+                <div class="score">
+                    <p class="scoreDigits off" id="guestscore"></p>
+                </div>
+                <div class="threebtn">
+                    <div class="onebutton"><button class="hgBtn" onclick='addPoints(1, "Guest")' disabled>+1</button></div>
+                    <div class="onebutton"><button class="hgBtn" onclick='addPoints(2, "Guest")' disabled>+2</button></div>
+                    <div class="onebutton"><button class="hgBtn" onclick='addPoints(3, "Guest")' disabled>+3</button></div>
+                </div>
+            </div>
+        </div>
+        <div class="container2">
+            <button id="newGame" onclick="newGame()">NEW GAME</button>
+        </div>
+        <dialog id="debugDialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Normal or Debug mode ?</h2>
+                </div>
+                <div class="modal-mode">
+                    <p style="color: #626567;">In Normal mode, the periods are 12 minutes long as NBA rules. But in Debug mode, <strong>the minutes last two seconds</strong>, so the periods last 24 seconds.</p>
+                    <button onclick="normal()" class="btnDialog" id="btnNormal">Normal mode</button>
+                    <button onclick="debug()" class="btnDialog" id="btnTest">Debug mode</button>
+                </div>
+            </div>
+        </dialog>
+
+        <script src="index.js"></script>
+    </body>
+</html>
